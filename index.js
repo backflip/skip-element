@@ -1,4 +1,4 @@
-class SkipElement extends HTMLElement {
+export class SkipElement extends HTMLElement {
 	#isConnected = false;
 
 	/** @type {string} */

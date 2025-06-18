@@ -4,7 +4,19 @@ The `<skip-element>` custom elements adds skips links before and after its conte
 
 ## Usage
 
-Wrap the content you want to be able to skip with `<skip-element>`:
+1. Install dependency:
+
+```sh
+npm install skip-element
+```
+
+2. Import module:
+
+```js
+import "skip-element";
+```
+
+3. Wrap the content you want to be able to skip with `<skip-element>`:
 
 ```html
 <skip-element name="iframe">

@@ -4,7 +4,6 @@
 	"author": "Thomas Jaggi <thomas@responsive.ch>",
 	"type": "module",
 	"main": "index.js",
-	"private": true,
 	"license": "MIT",
 	"scripts": {
 		"test": "vitest run",
