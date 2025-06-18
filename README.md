@@ -59,4 +59,4 @@ customElements.define("my-skip-element", SkipElement);
 
 ### Custom styles
 
-See [./index.js]() for default styles. They can be overriden from outside as everything is happening in light DOM.
+See [index.js](https://github.com/backflip/skip-element/blob/main/index.js#L48-L68) for default styles. They can be overriden from outside as everything is happening in light DOM.
