@@ -1,6 +1,6 @@
 # `skip-element` web component
 
-The `<skip-element>` custom element adds skips links before and after its content.
+The `<skip-element>` custom element adds skip links before and after its content.
 
 Why? For anyone not using a pointing device it can be cumbersome to navigate past an element with many focus stops. Imagine navigating by keyboard and having to tab past an iframe with many interactive elements. Or a carousel.
 
