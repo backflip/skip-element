@@ -18,7 +18,7 @@ export class SkipElement extends HTMLElement {
 
 	connectedCallback() {
 		this.#isConnected = true;
-		
+
 		this.update();
 	}
 
@@ -100,4 +100,7 @@ export class SkipElement extends HTMLElement {
 	}
 }
 
-customElements.define("skip-element", SkipElement);
+// https://www.zachleat.com/web/nodefine/
+if (!new URL(import.meta.url).searchParams.has("nodefine")) {
+	customElements.define("skip-element", SkipElement);
+}

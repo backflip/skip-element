@@ -1,14 +1,16 @@
 import { expect, test } from "vitest";
 import { getByText } from "@testing-library/dom";
-import "../index.js";
+import { SkipElement } from "../index.js";
 
-function createElement() {
+class CustomSkipElement extends SkipElement {}
+
+function createElement(customElementName = "skip-element") {
 	const iframe = document.createElement("iframe");
 
 	iframe.title = "Exemplary iframe using https://example.com";
 	iframe.src = "https://example.com";
 
-	const element = document.createElement("skip-element");
+	const element = document.createElement(customElementName);
 
 	element.appendChild(iframe);
 
@@ -47,4 +49,17 @@ test("changes labels via attributes", () => {
 
 	// @ts-ignore Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.
 	expect(afterLink).toBeInTheDocument();
+});
+
+test("allows for custom element name", () => {
+	customElements.define("custom-skip-element", CustomSkipElement);
+
+	const element = createElement("custom-skip-element");
+
+	document.body.appendChild(element);
+
+	const beforeLink = getByText(element, "Skip forward over element");
+
+	// @ts-ignore Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.
+	expect(beforeLink).toBeInTheDocument();
 });

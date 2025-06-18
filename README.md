@@ -16,6 +16,14 @@ npm install skip-element
 import "skip-element";
 ```
 
+This will automatically register `skip-element` in the custom element registry. To avoid this, import the element with [`?nodefine`](https://www.zachleat.com/web/nodefine/) and register it yourself:
+
+```js
+import { SkipElement } from "skip-element?nodefine";
+
+customElements.define("my-skip-element", SkipElement);
+```
+
 3. Wrap the content you want to be able to skip with `<skip-element>`:
 
 ```html
