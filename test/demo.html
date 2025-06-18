@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>skip-element demo</title>
+    <script type="module" src="../index.js"></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><code>skip-element</code> demo</h1>
+
+    <p>
+      Examples of using <code>&lt;skip-element&gt;</code> custom element to add
+      skip links before and after its content.
+    </p>
+
+    <p>By default, the skip links are hidden until focused.</p>
+
+    <h2>Default</h2>
+
+    <skip-element name="iframe">
+      <iframe
+        src="https://example.com"
+        title="Exemplary iframe using example.com"
+      ></iframe>
+    </skip-element>
+
+    <h2>Custom settings for labels</h2>
+
+    <skip-element
+      name="iFrame"
+      before="{name} überspringen"
+      after="{name} rückwärts überspringen"
+      lang="de"
+    >
+      <iframe
+        src="https://example.com"
+        title="Exemplary iframe using example.com"
+      ></iframe>
+    </skip-element>
+
+    <h2>Visible skip links</h2>
+
+    <skip-element name="iframe" visible>
+      <iframe
+        src="https://example.com"
+        title="Exemplary iframe using example.com"
+      ></iframe>
+    </skip-element>
+  </body>
+</html>

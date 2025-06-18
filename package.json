@@ -1,0 +1,18 @@
+{
+	"name": "skip-element",
+	"version": "0.0.1",
+	"author": "Thomas Jaggi <thomas@responsive.ch>",
+	"type": "module",
+	"main": "index.js",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"test": "vitest run",
+    "typecheck": "tsc -p jsconfig.json"
+	},
+	"devDependencies": {
+		"@vitest/browser": "^3.2.4",
+		"playwright": "^1.53.0",
+		"typescript": "^5.8.3"
+	}
+}
