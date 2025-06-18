@@ -1,36 +1,36 @@
 # `skip-element` web component
 
-The `<skip-element>` custom elements adds skips links before and after its content.
+The `<skip-element>` custom element adds skips links before and after its content.
 
 ## Usage
 
 1. Install dependency:
 
-```sh
-npm install skip-element
-```
+   ```sh
+   npm install skip-element
+   ```
 
 2. Import module:
 
-```js
-import "skip-element";
-```
+   ```js
+   import "skip-element";
+   ```
 
-This will automatically register `skip-element` in the custom element registry. To avoid this, import the element with [`?nodefine`](https://www.zachleat.com/web/nodefine/) and register it yourself:
+   This will automatically register `skip-element` in the custom element registry. To avoid this, import the element with [`?nodefine`](https://www.zachleat.com/web/nodefine/) and register it yourself:
 
-```js
-import { SkipElement } from "skip-element?nodefine";
+   ```js
+   import { SkipElement } from "skip-element?nodefine";
 
-customElements.define("my-skip-element", SkipElement);
-```
+   customElements.define("my-skip-element", SkipElement);
+   ```
 
 3. Wrap the content you want to be able to skip with `<skip-element>`:
 
-```html
-<skip-element name="iframe">
-	<iframe src="https://example.com" title="Exemplary iframe using example.com"></iframe>
-</skip-element>
-```
+   ```html
+   <skip-element name="iframe">
+   	<iframe src="https://example.com" title="Exemplary iframe using example.com"></iframe>
+   </skip-element>
+   ```
 
 ## Attributes
 
