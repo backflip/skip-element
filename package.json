@@ -5,6 +5,7 @@
 	"type": "module",
 	"main": "index.js",
 	"license": "MIT",
+  "repository": "github:backflip/skip-element",
 	"scripts": {
 		"test": "vitest run",
     "typecheck": "tsc -p jsconfig.json"
