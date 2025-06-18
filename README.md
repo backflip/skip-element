@@ -4,13 +4,15 @@ The `<skip-element>` custom element adds skips links before and after its conten
 
 ## Usage
 
-1. Install dependency:
+1. Use module via npm:
+
+   Install dependency:
 
    ```sh
    npm install skip-element
    ```
 
-2. Import module:
+   Import module:
 
    ```js
    import "skip-element";
@@ -23,6 +25,14 @@ The `<skip-element>` custom element adds skips links before and after its conten
 
    customElements.define("my-skip-element", SkipElement);
    ```
+
+2. If you are feeling lucky, you can alternatively load it via [jsDelivr CDN](https://www.jsdelivr.com):
+
+   ```html
+   <script type="module" src="https://cdn.jsdelivr.net/npm/skip-element@1.0.0"></script>
+   ```
+
+   **NOTE**: This should be done for demo purposes only as it is _highly_ insecure to load arbitrary JavaScript into your page.
 
 3. Wrap the content you want to be able to skip with `<skip-element>`:
 

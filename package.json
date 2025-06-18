@@ -1,6 +1,6 @@
 {
 	"name": "skip-element",
-	"version": "0.0.2",
+	"version": "1.0.0",
 	"author": "Thomas Jaggi <thomas@responsive.ch>",
 	"type": "module",
 	"main": "index.js",
