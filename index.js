@@ -42,15 +42,16 @@ export class SkipElement extends HTMLElement {
 
 		this.insertAdjacentElement("beforeend", this.afterLink);
 
-		// Styles
+		// Styles (using minimal specificity to simplify overrides)
 		const style = document.createElement("style");
 
 		style.textContent = `
-			skip-element:not(.skip-element--visible) .skip-element-link {
+			skip-element:where(:not(.skip-element--visible)) a:where(.skip-element-link) {
 				position: absolute;
+				background: white;
 			}
 
-			skip-element:not(.skip-element--visible) .skip-element-link:not(:focus):not(:active) {
+			skip-element:where(:not(.skip-element--visible)) a:where(.skip-element-link:not(:focus):not(:active)) {
 				clip: rect(0 0 0 0); 
 				clip-path: inset(50%);
 				height: 1px;
@@ -60,7 +61,7 @@ export class SkipElement extends HTMLElement {
 				width: 1px;
 			}
 
-			skip-element.skip-element--visible {
+			skip-element:where(.skip-element--visible) {
 				display: flex;
 				flex-direction: column;
 				align-items: start;
