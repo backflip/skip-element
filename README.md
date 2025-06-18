@@ -25,10 +25,10 @@ Demo: https://backflip.github.io/skip-element/
 2. If you are feeling lucky, you can alternatively load it via [jsDelivr CDN](https://www.jsdelivr.com):
 
    ```html
-   <script type="module" src="https://cdn.jsdelivr.net/npm/skip-element@1.0.3"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/npm/skip-element@1.0.5"></script>
    ```
 
-   **NOTE**: This should be done for demo purposes only as it is _highly_ insecure to load arbitrary JavaScript into your page.
+   **NOTE**: This should be done for demo purposes only as it makes it impossible to implement a reasonable [content security policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP).
 
 3. Wrap the content you want to be able to skip with `<skip-element>`:
 
@@ -37,6 +37,19 @@ Demo: https://backflip.github.io/skip-element/
    	<iframe src="https://example.com" title="Exemplary iframe using example.com"></iframe>
    </skip-element>
    ```
+
+This generates the following markup:
+
+```html
+<skip-element name="iframe">
+	<a href="#UUID-after" id="UUID-before" class="skip-element-link">Skip forward over iframe</a>
+	<iframe src="https://example.com" title="Exemplary iframe using example.com"></iframe>
+	<a href="#UUID-before" id="UUID-after" class="skip-element-link">Skip backwards over iframe</a>
+	<style>
+		/* Default styles, see note regarding custom styles below */
+	</style>
+</skip-element>
+```
 
 ## Advanced usage
 
