@@ -5,14 +5,15 @@
 	"type": "module",
 	"main": "index.js",
 	"license": "MIT",
-  "repository": "github:backflip/skip-element",
+	"repository": "github:backflip/skip-element",
 	"scripts": {
 		"test": "vitest run",
-    "typecheck": "tsc -p jsconfig.json"
+		"typecheck": "tsc -p jsconfig.json"
 	},
 	"devDependencies": {
 		"@vitest/browser": "^3.2.4",
 		"playwright": "^1.53.0",
+		"prettier": "^3.5.3",
 		"typescript": "^5.8.3"
 	}
 }
