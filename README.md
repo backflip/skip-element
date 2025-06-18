@@ -25,7 +25,7 @@ Demo: https://backflip.github.io/skip-element/
 2. If you are feeling lucky, you can alternatively load it via [jsDelivr CDN](https://www.jsdelivr.com):
 
    ```html
-   <script type="module" src="https://cdn.jsdelivr.net/npm/skip-element@1.0.0"></script>
+   <script type="module" src="https://cdn.jsdelivr.net/npm/skip-element@1.0.3"></script>
    ```
 
    **NOTE**: This should be done for demo purposes only as it is _highly_ insecure to load arbitrary JavaScript into your page.
